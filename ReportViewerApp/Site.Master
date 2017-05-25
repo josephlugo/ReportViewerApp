@@ -63,7 +63,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - ReportViewer App</p>
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> - ReportViewer App</p>
             </footer>
         </div>
 

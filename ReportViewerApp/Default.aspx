@@ -10,7 +10,14 @@
         <p class="lead" style="font-size: medium" >You can display reports without having SSRS server installed!</p> 
        
     </div>   
-    
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">            
+            <p class="text-center">
+                <asp:Button ID="btnViewList" runat="server" Text="View Report" Width="112px" CssClass="btn btn-default" OnClick="btnViewList_Click" />
+            </p>
+        </div>
+    </div>    
 
     <div class="row">
         <div class="col-md-4 col-md-offset-2">

@@ -13,6 +13,15 @@ namespace ReportViewerApp {
     public partial class _Default {
         
         /// <summary>
+        /// btnViewList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnViewList;
+        
+        /// <summary>
         /// ReportViewerDD control.
         /// </summary>
         /// <remarks>

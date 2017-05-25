@@ -42,7 +42,25 @@
   <ItemGroup>
     <Compile Include="DataController.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PersonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PersonDataSet.xsc">
+      <DependentUpon>PersonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PersonDataSet.xss">
+      <DependentUpon>PersonDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
