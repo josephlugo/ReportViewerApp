@@ -1,4 +1,4 @@
-﻿<%@ Page Title="ReportViewer App" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ReportViewerApp._Default" %>
+﻿<%@ Page Title="Homepage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ReportViewerApp._Default" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -10,6 +10,7 @@
         <p class="lead" style="font-size: medium" >You can display reports without having SSRS server installed!</p> 
        
     </div>   
+    
 
     <div class="row">
         <div class="col-md-4 col-md-offset-2">
