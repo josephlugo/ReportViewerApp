@@ -7,14 +7,41 @@ namespace DataAccessLayer
     public class DataController
     {        
 
+        //Populating the dataset from a list of people
         public PersonDataSet GetPersonList()
         {   
             PersonDataSet personDS = new PersonDataSet();
 
-            DataTable dt = personDS.Tables[0];
+            DataSet tempDS = new DataSet();
+            DataTable dt = new DataTable();
+            dt.TableName = "PersonDT";
+
+            DataColumn column;
+
+            //Create columns    
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "id";
+            dt.Columns.Add(column);
+                        
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "FirstName";
+            dt.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "LastName";
+            dt.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Address";
+            dt.Columns.Add(column);
 
             List<Person> personList = new List<Person>();
 
+            //Populating the list with some data
             personList.Add(new Person("1", "FirstName1", "LastName1", "Address1"));
             personList.Add(new Person("2", "FirstName2", "LastName2", "Address2"));
             personList.Add(new Person("3", "FirstName2", "LastName2", "Address3"));
@@ -35,9 +62,11 @@ namespace DataAccessLayer
                 row["Address"] = item.Address;
 
                 dt.Rows.Add(row);
-            }           
+            }
 
-            personDS.Tables.Add(dt);
+            tempDS.Tables.Add(dt);
+
+            personDS.Merge(tempDS);
 
             return personDS;
 

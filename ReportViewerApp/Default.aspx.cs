@@ -17,18 +17,17 @@ namespace ReportViewerApp
             {
                 DataAccessLayer.DataController dataLayer = new DataAccessLayer.DataController();
                                                                                 
-                    DataAccessLayer.PersonDataSet ds = null;
-                    ds = dataLayer.GetPersonList();
+                DataAccessLayer.PersonDataSet ds = null;
 
-                    ReportViewerDD.Visible = true;
+                ds = dataLayer.GetPersonList();
 
-                    ReportViewerDD.LocalReport.DataSources.Clear();
+                ReportViewerDD.Visible = true;
 
-                    ReportDataSource source = new ReportDataSource("DataTable1", ds);
+                ReportViewerDD.LocalReport.DataSources.Clear();                
 
-                    ReportViewerDD.LocalReport.DataSources.Add(source);
+                ReportViewerDD.LocalReport.DataSources.Add( new ReportDataSource("DataSet1", ds.Tables[0]));
 
-                    ReportViewerDD.LocalReport.Refresh();        
+                ReportViewerDD.LocalReport.Refresh();
 
             }
             catch (Exception ex)

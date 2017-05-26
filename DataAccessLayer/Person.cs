@@ -5,9 +5,7 @@
         private string id;
         private string firstName;
         private string lastName;
-        private string address;
-
-      
+        private string address;      
 
         public Person(string id, string fn, string ln, string addrs)
         {
@@ -17,37 +15,16 @@
             address = addrs;
         }
 
-        public string Id
-        {
-            get
-            {
-                return id;
-            }
+        public string Id { get { return id; }
         }
 
-        public string FirstName
-        {
-            get
-            {
-                return firstName;
-            }
-
+        public string FirstName { get { return firstName; }
         }
 
-        public string LastName
-        {
-            get
-            {
-                return lastName;
-            }
+        public string LastName { get { return lastName; }
         }
 
-        public string Address
-        {
-            get
-            {
-                return address;
-            }
+        public string Address { get { return address; }
         }
 
     }
